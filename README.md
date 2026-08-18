@@ -18,7 +18,25 @@ trí trên timeline theo timecode khớp với voice.
   editorial, unknown) và xếp hạng ưu tiên license an toàn trước, để bạn giảm
   rủi ro bản quyền/Content ID khi đăng video.
 
-## Cài đặt
+## Cài đặt trên Windows (tự động, không cần gõ lệnh)
+
+1. Tải/clone repo này về máy, giải nén (nếu tải zip) rồi mở thư mục ra.
+2. **Double-click `1-cai-dat.bat`** — script sẽ tự cài Python, ffmpeg (qua
+   winget) và toàn bộ thư viện cần thiết. Chỉ cần chạy **một lần**.
+3. (Khuyến nghị) Mở file `.env` vừa được tạo ra bằng Notepad, dán
+   `ANTHROPIC_API_KEY=...` vào (lấy tại console.anthropic.com).
+4. Từ lần sau, **double-click `2-chay.bat`** mỗi khi muốn tìm B-roll — script
+   sẽ hỏi bạn đường dẫn file `.srt`, file voice, tên project, rồi tự tải clip
+   và dựng sẵn project CapCut (tự tìm thư mục drafts của CapCut nếu có).
+
+> Hai script này gọi PowerShell bên trong (`1-cai-dat.ps1`, `2-chay.ps1`) —
+> chưa được test trên máy Windows thật, chỉ được kiểm tra cú pháp thủ công.
+> Nếu gặp lỗi, gửi lại nguyên văn thông báo lỗi hiện trên màn hình để sửa.
+
+Nếu winget báo lỗi hoặc máy bạn chưa có winget (Windows cũ), cài "App
+Installer" từ Microsoft Store rồi chạy lại `1-cai-dat.bat`.
+
+## Cài đặt thủ công (macOS/Linux, hoặc khi muốn tự kiểm soát)
 
 ```bash
 pip install -r requirements.txt
