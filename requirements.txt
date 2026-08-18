@@ -1,0 +1,4 @@
+requests>=2.31
+pyJianYingDraft>=0.3.0
+yt-dlp>=2024.1.1
+anthropic>=0.40.0
